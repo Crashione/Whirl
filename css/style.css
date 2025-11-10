@@ -5,13 +5,18 @@ body {
 
 
 
-.conteiner {
+.container {
     max-width: 1130px;
     width: 100%;
     margin: 0 auto;
 }
 
 .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
     padding: 20px 0;
 }
 
@@ -38,7 +43,9 @@ body {
 }
 
 .btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     padding: 6px 20px;
     font-size: 15px;
     line-height: 160%;
@@ -52,9 +59,19 @@ body {
     color: #0070a0;
 }
 
+.btn.blue svg path {
+    stroke: #006B99;
+    transition: 0.3s;
+}
+
 .btn.blue:hover {
     background: #0070a0;
     color: #fff;
+}
+
+.btn.blue:hover svg path {
+    stroke: #fff;
+
 }
 
 .btn.white {
@@ -74,4 +91,85 @@ body {
     display: flex;
     gap: 12px;
     margin-left: auto;
+}
+
+.hero_row {
+    padding: 145px 0 80px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.hero_content {
+    max-width: 525px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.hero_tittle {
+    margin: 0;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 110%;
+    letter-spacing: 0em;
+    color: #1f1f1f;
+}
+
+.hero_desc {
+    margin: 0;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #1f1f1f;
+    max-width: 67%;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 12px;
+}
+
+/* сетка */
+
+.advantages_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -16px;
+}
+
+.advantages_item_container {
+    width: 33.3%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+/* конец сетки */
+
+.advantages_item {
+    padding: 32px 32px 40px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+}
+
+.advantages_item_tittle {
+    font-family: "Fraunces", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 125%;
+    letter-spacing: 0.01em;
+    color: #1f1f1f;
+}
+
+.advantages_item_desc {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    color: #1f1f1f;
 }
